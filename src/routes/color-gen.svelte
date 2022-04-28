@@ -79,6 +79,7 @@
 	:global([data-theme='dark']) section.themed {
 		--input-bg: var(--palette-gray-20);
 	}
+
 	input {
 		width: 100%;
 
