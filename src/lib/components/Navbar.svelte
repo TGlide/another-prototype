@@ -1,11 +1,12 @@
 <script lang="ts">
-	import Flex, { type FlexProps } from '$lib/UI/Flex.svelte';
+	import Flex from '$lib/UI/Flex.svelte';
 	import Link from '$lib/UI/Link.svelte';
+	import { joinCss, type CSS } from '$lib/UI/utils';
 
-	interface $$Props extends FlexProps {}
+	export let css: CSS | undefined = undefined;
 </script>
 
-<Flex tag="nav" gap={16} {...$$restProps}>
+<Flex tag="nav" css={joinCss({ gap: 16 }, css)}>
 	<Link href="/">📚 UI Library</Link>
 	<Link href="/color-gen">🎨 Generate colors</Link>
 </Flex>

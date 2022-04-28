@@ -41,29 +41,29 @@
 </svelte:head>
 
 <section class="themed">
-	<Flex justify="center" align="center" p={16} mt={128}>
-		<Box textAlign="left">
+	<Flex css={{ justifyContent: 'center', alignItems: 'center', p: 16, mt: 128 }}>
+		<Box>
 			<Link href="/">{'<'} Back</Link>
-			<Text fontWeight={600} fontSize={32} mt={24}>Color Generator</Text>
+			<Text css={{ fontWeight: 600, fontSize: 32, mt: 24 }}>Color Generator</Text>
 
-			<Flex minW="50vh" direction="column" gap={16} mt={32}>
-				<Box tag="label" display="block">
-					<Text fontSize={18} mb={8}>Name</Text>
+			<Flex css={{ minW: '50vh', flexDirection: 'column', gap: 16, mt: 32 }}>
+				<Box tag="label" css={{ display: 'block' }}>
+					<Text css={{ fontSize: 18, mb: 8 }}>Name</Text>
 					<input bind:value={name} />
 				</Box>
-				<Box tag="label" display="block">
-					<Text fontSize={18} mb={8}>Color</Text>
+				<Box tag="label" css={{ display: 'block' }}>
+					<Text css={{ fontSize: 18, mb: 8 }}>Color</Text>
 					<input bind:value={color} />
 					{#if color && parsedColor === null}
-						<Text color="red50" fontSize={12} mt={4}>Invalid color</Text>
+						<Text css={{ color: 'red50', fontSize: 12, mt: 4 }}>Invalid color</Text>
 					{/if}
 				</Box>
 			</Flex>
 
-			<Flex direction="column" gap={6} mt={32}>
+			<Flex css={{ flexDirection: 'column', gap: 6, mt: 32 }}>
 				{#each Object.entries(cssVars) as [key, value]}
-					<Text fontFamily="mono">
-						{key}:<Text tag="span" opacity={0.5}>&nbsp;{value};</Text>
+					<Text css={{ fontFamily: 'mono' }}>
+						{key}:<Text tag="span" css={{ opacity: 0.5 }}>&nbsp;{value};</Text>
 					</Text>
 				{/each}
 			</Flex>

@@ -1,0 +1,171 @@
+/* Margin */
+.m {
+	margin: var(--m, 0);
+}
+.mt,
+.my {
+	margin-top: var(--mt, 0);
+}
+.mr,
+.mx {
+	margin-right: var(--mr, 0);
+}
+
+.mb,
+.my {
+	margin-bottom: var(--mb, 0);
+}
+
+.ml,
+.mx {
+	margin-left: var(--ml, 0);
+}
+
+/* Padding */
+.p {
+	padding: var(--p, 0);
+}
+
+.pt,
+.py {
+	padding-top: var(--pt, 0);
+}
+
+.pr,
+.px {
+	padding-right: var(--pr, 0);
+}
+
+.pb,
+.py {
+	padding-bottom: var(--pb, 0);
+}
+
+.pl,
+.px {
+	padding-left: var(--pl, 0);
+}
+
+/* Width & Height */
+.w,
+.size {
+	width: var(--w);
+}
+
+.minW {
+	min-width: var(--min-w);
+}
+
+.maxW {
+	max-width: var(--maxW);
+}
+
+.h,
+.size {
+	height: var(--h);
+}
+
+.minH {
+	min-height: var(--min-h);
+}
+
+.maxH {
+	max-height: var(--max-h);
+}
+
+/* Border */
+.radius {
+	border-radius: var(--radius);
+}
+
+.borderColor {
+	border-color: var(--border-color);
+}
+
+.borderSize {
+	border-width: var(--border-size);
+}
+
+.borderStyle {
+	border-style: var(--border-style);
+}
+
+/* Colors */
+.bgColor {
+	background-color: var(--bg-color);
+}
+
+.color {
+	color: var(--color);
+}
+
+/* Flex & Grid */
+.gap {
+	gap: var(--gap);
+}
+
+.flexDirection {
+	flex-direction: var(--flex-direction);
+}
+
+.justifyContent {
+	justify-content: var(--justify-content);
+}
+
+.alignItems {
+	align-items: var(--align-items);
+}
+
+.templateColumns {
+	grid-template-columns: var(--template-columns);
+}
+
+.templateRows {
+	grid-template-rows: var(--template-rows);
+}
+
+.placeItems {
+	place-items: var(--place-items);
+}
+
+/* Typography */
+.fontSize {
+	font-size: var(--font-size);
+}
+
+.fontWeight {
+	font-weight: var(--font-weight);
+}
+
+.lineHeight {
+	line-height: var(--line-height);
+}
+
+.letterSpacing {
+	letter-spacing: var(--letter-spacing);
+}
+
+.textTransform {
+	text-transform: var(--text-transform);
+}
+
+.fontFamily {
+	font-family: var(--font-family);
+}
+
+.textDecoration {
+	text-decoration: var(--text-decoration);
+}
+
+/* Misc. */
+.opacity {
+	opacity: var(--opacity);
+}
+
+.display {
+	display: var(--display);
+}
+
+.textAlign {
+	text-align: var(--text-align);
+}

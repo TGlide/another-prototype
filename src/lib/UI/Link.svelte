@@ -1,5 +1,6 @@
 <script lang="ts" context="module">
-	export type LinkProps = TextProps & {
+	export type LinkProps = {
+		css?: CSS;
 		href: string;
 		target?: string;
 		rel?: string;
@@ -7,28 +8,25 @@
 </script>
 
 <script lang="ts">
-	import type { TextProps } from './Text.svelte';
-	import Text from './Text.svelte';
-
+	import { parseCss, type CSS } from './utils';
 	interface $$Props extends LinkProps {}
+
+	export let css: $$Props['css'] = undefined;
+	export let href: $$Props['href'];
+
+	$: ({ style, classes } = parseCss(css));
 </script>
 
-<div class="wrapper">
-	<Text tag="a" {...$$restProps}>
-		<slot />
-	</Text>
-</div>
+<a {style} class={classes} {href} {...$$restProps}>
+	<slot />
+</a>
 
 <style>
-	.wrapper {
-		display: contents;
-	}
-
-	.wrapper :global(a) {
+	a {
 		transition: opacity 0.25s ease;
 	}
 
-	.wrapper :global(a:hover) {
+	a:hover {
 		opacity: 0.75;
 	}
 </style>
